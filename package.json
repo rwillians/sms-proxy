@@ -1,0 +1,15 @@
+{
+  "name": "sms-proxy",
+  "private": true,
+  "scripts": {
+    "dev": "appify -d -c _src/config.js _src/api.js"
+  },
+  "dependencies": {
+    "@mantris/appify": "^6.2.0",
+    "express-rescue": "^1.1.20",
+    "twilio": "^3.30.1"
+  },
+  "devDependencies": {
+    "now": "^15.0.5"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/inbound-messages",
+      "methods": [ "OPTIONS", "POST" ]
+    }
+  ],
+  "builds": [
+    { "src": "./**/*.js", "use": "@now/node" }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "SENTRY_DSN": "@sms-proxy-sentry-dsn",
+    "MY_PHONE_NUMBER": "@sms-proxy-my-phone-number",
+    "TWILIO_ACCOUNT_SID": "@sms-proxy-twilio-account-sid",
+    "TWILIO_AUTH_TOKEN": "@sms-proxy-twilio-auth-token",
+    "TWILIO_MESSAGING_SERVICE_SID": "@sms-proxy-twilio-messaging-service-sid"
+  }
+}
